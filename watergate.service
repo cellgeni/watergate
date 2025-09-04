@@ -1,0 +1,17 @@
+[Unit]
+Description=Watergate telemetry daemon
+Documentation=https://github.com/cellgeni/watergate
+After=default.target
+Wants=network-online.target
+After=network-online.target
+ConditionHost=<WATERGATE_HOST goes here>
+
+[Service]
+ExecStart=bash -l -c '/full/path/uv run main.py'
+Type=simple
+Restart=always
+RestartSec=5
+SyslogIdentifier=watergate
+
+[Install]
+WantedBy=default.target

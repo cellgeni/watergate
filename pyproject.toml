@@ -1,0 +1,23 @@
+[project]
+name = "watergate"
+version = "0.1.0"
+description = "Wiretaps on things"
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = [
+    "psycopg",
+    "psycopg-pool"
+]
+[project.urls]
+Homepage = "https://github.com/cellgeni/watergate"
+Issues = "https://github.com/cellgeni/watergate"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
